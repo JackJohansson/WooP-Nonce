@@ -7,14 +7,14 @@
 
 - [About the project](#about-the-project)
 - [Quick look at the features](#quick-look-at-the-features)
-- (How to use)[#how-to-use]
-  - (Classes)[#classes]
-  - (Arguments)[#arguments]
-  - (Methods)[#methods]
-  - (Sample usage)[#sample-usage]
-- (How to install)[#how-to-install]
-- (Requirements)[#requirements]
-- (Licence)[#licence]
+- [How to use](#how-to-use)
+  - [Classes](#classes)
+  - [Arguments](#arguments)
+  - [Methods](#methods)
+  - [Sample usage](#sample-usage)
+- [How to install](#how-to-install)
+- [Requirements](#requirements)
+- [Licence](#licence)
 ------------------------------------------------------------------------------------------------------
 ## About the project
 
