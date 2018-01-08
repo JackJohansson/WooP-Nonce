@@ -75,7 +75,7 @@ We're going to have a look at the examples of how to use the above methods. In t
 $woop_nonce = new \WoopNonce\Nonce();
 
 // Create a simple nonce string
-echo $woop->GenerateNonce();
+echo $woop_nonce->GenerateNonce();
 ```
 
 The above code will result in a nonce string being output.
@@ -86,7 +86,7 @@ Now, let's try and make a bunch of nonces. We're going to generate 5 nonces:
 $woop_nonce = new \WoopNonce\Nonce();
 
 // Create 5 nonces
-$nonces     = $woop->GenerateNonce( [ 'count' => 5 ] );
+$nonces     = $woop_nonce->GenerateNonce( [ 'count' => 5 ] );
 
 print_r ( $nonces );
 ```
@@ -136,7 +136,7 @@ The actions are also generated randomly. Now, time to create an object of 3 nonc
 $woop_nonce = new \WoopNonce\Nonce();
 
 // Create 3 nonces
-$nonces     = $woop->GenerateNonce( [ 'type' => 'plain', 'count' => 3, 'object' => true ] );
+$nonces     = $woop_nonce->GenerateNonce( [ 'type' => 'plain', 'count' => 3, 'object' => true ] );
 
 print_r ( $nonces );
 ```
