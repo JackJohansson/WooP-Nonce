@@ -1,7 +1,9 @@
 # WooP Nonce
-WooP-Nonce is a composer package that can be used to interact with WordPress nonces in an OOP way.
 
+**WooP-Nonce is a composer package that can be used to interact with WordPress nonces in an OOP way.**
+------------------------------------------------------------------------------------------------------
 #### Table of Content
+
 - [About the project](#about-the-project)
 - [Quick look at the features](#quick-look-at-the-features)
 - (How to use)[#how-to-use]
@@ -12,7 +14,7 @@ WooP-Nonce is a composer package that can be used to interact with WordPress non
 - (How to install)[#how-to-install]
 - (Requirements)[#requirements]
 - (Licence)[#licence]
-
+------------------------------------------------------------------------------------------------------
 ## About the project
 
 WordPress itself can pretty much handle every feature represented int this project, but they are all functional. In order to demonstrate an OOP version of nonces, we can use WooP-Nonce.
@@ -68,7 +70,7 @@ The `NonceOptions` class provides 2 methods, that can be used to retrieve the va
 ## Sample Usage
 We're going to have a look at the examples of how to use the above methods. In the first example, we will generate a simple nonce string:
 
-```
+```php
 $woop_nonce = new \WoopNonce\Nonce();
 
 // Create a simple nonce string
@@ -79,7 +81,7 @@ The above code will result in a nonce string being output.
 
 Now, let's try and make a bunch of nonces. We're going to generate 5 nonces:
 
-```
+```php
 $woop_nonce = new \WoopNonce\Nonce();
 
 // Create 5 nonces
@@ -90,7 +92,7 @@ print_r ( $nonces );
 
 Since we are creating 5 nonces, the output will be an array, similiar to this:
 
-```
+```php
 Array
 (
    [0] => Array
@@ -129,7 +131,7 @@ Array
 The actions are also generated randomly. Now, time to create an object of 3 nonces, with random actions:
 
 
-```
+```php
 $woop_nonce = new \WoopNonce\Nonce();
 
 // Create 3 nonces
@@ -140,7 +142,7 @@ print_r ( $nonces );
 
 The result would be an object of 3 nonces, along with their full details:
 
-```
+```php
 stdClass Object
 (
    [0] => stdClass Object
@@ -169,7 +171,7 @@ stdClass Object
 
 Here we'll have an example of how to verify a nonce. To do so, we create a nonce and verify it:
 
-```
+```php
 $woop_nonce = new \WoopNonce\Nonce();
 
 // Create a simple nonce string
@@ -184,7 +186,7 @@ The rest of the methods have a pretty self explanatory usage, and are very simil
 
 For the final example, we're going to set the nonce options using the `NonceOptions` class. This class should be initiated as soon as the `init` action hook. Let's alter the lifetime and the message:
 
-```
+```php
 add_action( 'init', '\WoopNonce\initiate_nonces_options' );
 function initiate_nonce_options() {
 
