@@ -1,6 +1,7 @@
 # WooP Nonce
 
 **WooP-Nonce is a composer package that can be used to interact with WordPress nonces in an OOP way.**
+
 ------------------------------------------------------------------------------------------------------
 #### Table of Content
 
