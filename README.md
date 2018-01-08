@@ -26,15 +26,15 @@ By using WooP-Nonce, you can generate nonces, verify them and check referers. Yo
 
  WooP-Nonce provides two classes. One class is used to handle the nonces, and one is used to set the options.
 
-###### Classes
+#### Classes
 
 Nonce: The Nonce class handles generating and verifying the nonces and their referers. This class is defined under the WoopNonce namespace.
 
 NonceOptions: The NonceOptions class is held in charge of overwriting the default nonce options. it internally uses WordPress filters to override these values.
 
-###### Arguments
+#### Arguments
 
-When initializing these classes, an array of arguments can be passed to them. These arguments are fully optional. The arguments for the Nonce class are as follows:
+When initializing these classes, an array of arguments can be passed to them or their methods. These arguments are fully optional. The arguments for the Nonce class are as follows:
 
 1. type: You can set the type of the nonce you want to create. The supported types are 'field', 'url' and 'plain'.
    - field: By setting the nonce type to field, the output will be a hidden nonce field that can be used in a form. You can control the referer field in the referer paremeter.
@@ -52,4 +52,6 @@ The NonceOptions class accepts two parameters:
 1. nonce_life: This is the lifetime of the nonce, controlled via the 'nonce_life' filter. It can accepts either an integer number ( in seconds ) or a WordPress time constant.
 2. message: The message you want to show when the `wp_nonce_ays()` function is called. Accepts a single string.
 
-###### Methods
+#### Methods
+
+The Nonce class provides multiple methods to deal with the nonces. Here's a complete list of the methods:
