@@ -1,5 +1,5 @@
 {
-  "name":         "woop-nonce",
+  "name":         "johansson/woop-nonce",
   "description":  "A composer package to use WordPress nonces in an OOP way.",
   "type":         "package",
   "keywords":     [
