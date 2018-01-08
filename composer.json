@@ -1,29 +1,26 @@
 {
-  "name":         "johansson/woop-nonce",
-  "description":  "A composer package to use WordPress nonces in an OOP way.",
-  "type":         "package",
-  "keywords":     [
-    "nonce",
-    "wordpress",
-    "wordpress nonce"
-  ],
-  "license":      "MIT",
-  "authors":      [
-    {
-      "name":  "Jack Johansson",
-      "email": "jack.johansson@yahoo.com",
-      "role":  "Developer"
-    }
-  ],
-  "require":      {
-    "php": ">=5.6.0"
-  },
-  "autoload":     {
-    "psr-4": {
-		"WoopNonce\\": "src/"    
-	},
-    "files": [
-      "WooP-Nonce.php"
-    ]
-  }
+    "name": "johansson/woopnonce",
+    "description": "A composer package to use WordPress nonces in an OOP way.",
+    "type": "package",
+	"keywords": [
+		"nonce",
+		"wordpress",
+		"wordpress nonce"
+	  ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jack Johansson",
+            "email": "jack.johansson@yahoo.com",
+			"role":  "Developer"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"WoopNonce\\": "src/"    
+		}
+	}
 }
