@@ -204,7 +204,9 @@ Which will set the lifetime of the nonces to 5 hours, and the message to `Oh No!
 
 # How to install
 
-Require the `WooP-Nonce` via composer.
+Install the composer package manager and require the package:
+
+`composer require johansson/woop-nonce`
 
 # Requirements
 
