@@ -47,9 +47,9 @@ The `Nonce` class provides multiple methods to deal with the nonces. Here's a co
 - `GenerateNonce()`: This method will generate nonces based on the passed arguments. The full arguments are as follows:
 
   - `type`: You can set the type of the nonce you want to create. The supported types are 'field', 'url' and 'plain'.
-    1. field: By setting the nonce type to field, the output will be a hidden nonce field that can be used in a form. You can control the referer field in the referer paremeter.
-    2. url: If you are trying to nonce a URL, you can set the type to url, and pass a valid URL to the 'url' parameter.
-    3. plain: This is for advanced users that only want the nonce string itself.
+    - `field`: By setting the nonce type to field, the output will be a hidden nonce field that can be used in a form. You can control the referer field in the referer paremeter.
+    - `url`: If you are trying to nonce a URL, you can set the type to url, and pass a valid URL to the 'url' parameter.
+    - `plain`: This is for advanced users that only want the nonce string itself.
   - `action`: You can pass your desired action to the class. If no action is passed, the default -1 action will be used. If you wish to use a random action, you can pass the 'rand' string. This is useful when you want to create a number of nonces.
   - `name`: The name to be used for outputting the hidden input in the 'field' type. If left blank, the default '\_wpnonce'' will be used.
   - `referer`: If you don't want to output the referer field in the 'field' type, you can set this prameter to false.
