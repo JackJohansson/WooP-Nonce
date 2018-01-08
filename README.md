@@ -26,7 +26,7 @@ By using WooP-Nonce, you can generate nonces, verify them and check referers. Yo
 
  WooP-Nonce provides two classes. One class is used to handle the nonces, and one is used to set the options.
 
-#### Classes
+- #### Classes
 
 Nonce: The Nonce class handles generating and verifying the nonces and their referers. This class is defined under the WoopNonce namespace.
 
