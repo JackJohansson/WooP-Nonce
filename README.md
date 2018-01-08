@@ -36,7 +36,7 @@ NonceOptions: The NonceOptions class is held in charge of overwriting the defaul
 
 ## Arguments
 
-When initializing these classes and calling their methods, an array of arguments can be passed to them or the methods. These arguments are fully optional. Each of the Nonce class's methods have their own methods. However, the `NonceOptions` class accepts an array of 2 parameters:
+When initializing these classes and calling their methods, an array of arguments can be passed to them or the methods. These arguments are fully optional. Each of the `Nonce` class's methods have their own arguments. However, the `NonceOptions` class accepts an array of 2 parameters:
 
 - `nonce_life`: This is the lifetime of the nonce, controlled via the `nonce_life` filter. It can accepts either an integer number ( in seconds ) or a WordPress time constant.
 - `message`: The message you want to show when the `wp_nonce_ays()` function is called. Accepts a single string.
