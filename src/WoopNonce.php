@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * This is the core file belonging to the WooP-Nonce package.
  *
@@ -62,15 +62,31 @@ class Nonce {
 	 *                         invalid URL is provided, a NULL will be returned
 	 *                         as the result.
 	 */
-	private $default_args = [
-		'type'    => 'plain',
-		'action'  => - 1,
-		'name'    => '_wpnonce',
-		'referer' => true,
-		'object'  => false,
-		'count'   => 1,
-		'url'     => '',
-	];
+	private $default_args;
+
+	/**
+	 * Public construct method to fill the $default_arg
+	 * property.
+	 *
+	 * @since  1.0
+	 *
+	 * @access public
+	 *
+	 *
+	 */
+	public function __construct() {
+
+		$this->default_args = [
+			'type'    => 'plain',
+			'action'  => - 1,
+			'name'    => '_wpnonce',
+			'referer' => true,
+			'object'  => false,
+			'count'   => 1,
+			'url'     => '',
+		];
+
+	}
 
 	/**
 	 * Public method to generate a nonce based on user's
@@ -190,7 +206,7 @@ class Nonce {
 					// Fill the nonce data into the object
 					$object->$key->nonce   = $value ['nonce'];
 					$object->$key->action  = $value ['action'];
-					$object->$key->referer = $_SERVER['REQUEST_URI'];
+					$object->$key->referer = ( isset ( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '' );
 
 				}
 
@@ -200,7 +216,7 @@ class Nonce {
 				$object->nonce   = $nonce;
 				$object->action  = $args['action'];
 				$object->name    = $args['name'];
-				$object->referer = $_SERVER['REQUEST_URI'];
+				$object->referer = ( isset ( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '' );
 			}
 
 			// Return the object
@@ -350,11 +366,11 @@ class NonceOptions {
 	 *
 	 * @access public
 	 *
-	 * @return void
+	 * @return boolean
 	 */
 	public function NonceLife() {
 
-		add_filter( 'nonce_life', [ $this, 'ReturnNonceLife' ] );
+		return add_filter( 'nonce_life', [ $this, 'ReturnNonceLife' ] );
 
 	}
 
@@ -366,11 +382,11 @@ class NonceOptions {
 	 *
 	 * @access public
 	 *
-	 * @return void
+	 * @return boolean
 	 */
 	public function NonceMessage() {
 
-		add_filter( 'gettext', [ $this, 'ReturnTranslation' ] );
+		return add_filter( 'gettext', [ $this, 'ReturnTranslation' ] );
 
 	}
 

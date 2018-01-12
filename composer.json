@@ -10,6 +10,9 @@
     "require": {
         "php": ">=5.6"
     },
+	"require-dev": {
+        "phpunit/phpunit": "3.7.14"
+    },
     "license": "MIT",
     "authors": [
         {
@@ -21,6 +24,14 @@
 	"autoload": {
 		"psr-4": {
 			"WoopNonce\\": "src/"    
+		},
+		"files": [
+			"src/WoopNonce.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+		  "WoopNonce\\Test\\": "test"
 		}
 	}
 }
