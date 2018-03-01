@@ -5,6 +5,7 @@
  * (c) Jack Johansson
  *
  */
+
 namespace WoopNonce;
 
 /**
@@ -118,21 +119,11 @@ class Nonce {
 		}
 
 		/**
-		 * Loop through the passed arguments, and check
-		 * which one of them is set. If a value is
-		 * set, then override the default value.
+		 * Merge the default args with the user
+		 * provided args
 		 *
 		 */
-		foreach ( $this->default_args as $key => $arg ) {
-
-			if ( isset( $args[ $key ] ) ) {
-				$this->default_args[ $key ] = $args[ $key ];
-			}
-
-		}
-
-		// Set a local variable to use in our switch
-		$args = $this->default_args;
+		$args = wp_parse_args( $args, $this->default_args );
 
 		/**
 		 * A switch to output the proper type of nonce
